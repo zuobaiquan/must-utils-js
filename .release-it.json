@@ -1,0 +1,14 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "npm": {
+    "publish": false,
+    "ignoreVersion": false
+  },
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "release-it": "^16.2.1"
+  }
+}
