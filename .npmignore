@@ -1,0 +1,13 @@
+.gitignore
+.husky
+.vscode
+node_modules
+play
+scripts
+src
+.editorconfig
+.eslintrc.cjs
+change-log.md
+rollup.config.mjs
+tsconfig.json
+.github

@@ -21,7 +21,7 @@ export function multiply(arg1, arg2) {
 export function divide(arg1, arg2, keep = 2) {
   const x = new BigNumber(arg1 || 0)
   const y = new BigNumber(arg2 || 0)
-  if (y === 0) {
+  if (arg2 === 0) {
     return 0
   }
   // 默认保留2位小数

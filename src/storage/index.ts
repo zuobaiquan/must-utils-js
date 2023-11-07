@@ -1,6 +1,7 @@
-import { isString } from './types'
+import { isString } from '../types'
 
 class Store {
+  storage: any
   constructor($storage = 'localStorage') {
     if (!global.window) {
       return
@@ -16,7 +17,7 @@ class Store {
     }
     this.storage.setItem(name, content)
     if (maxAge && !isNaN(parseInt(maxAge))) {
-      const timeout = parseInt(new Date().getTime() / 1000)
+      const timeout = new Date().getTime() / 1000
       this.storage.setItem(`${name}_expire`, timeout + maxAge)
     }
   }
@@ -27,7 +28,7 @@ class Store {
     const content = this.storage.getItem(name)
     const _expire = this.storage.getItem(`${name}_expire`)
     if (_expire) {
-      const now = parseInt(new Date().getTime() / 1000)
+      const now = new Date().getTime() / 1000
       if (now > _expire) {
         return
       }

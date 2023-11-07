@@ -1,14 +1,5 @@
-## Project setup
-```
-npm install
-```
+## must-utils-js
 
-### Compiles for development
-```
-npm run start
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 安装方式
+
