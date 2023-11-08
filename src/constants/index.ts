@@ -1,1 +1,1 @@
-export const PACKAGE_NAME = `js-utils`;
+export const PACKAGE_NAME = `must-utils-js`;
