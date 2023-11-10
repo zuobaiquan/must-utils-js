@@ -13,7 +13,7 @@ const setStyle = (element, styleName, value) =>{
     }
   } else {
     styleName = camelCase(styleName)
-    if (styleName === 'opacity' && (isNumber(ieVersion) && ieVersion < 9)) {
+    if (styleName === 'opacity' && (isNumber(ieVersion) && ieVersion < 9 && ieVersion!==-1)) {
       element.style.filter = isNaN(value) ? '' : 'alpha(opacity=' + value * 100 + ')'
     } else {
       element.style[styleName] = value

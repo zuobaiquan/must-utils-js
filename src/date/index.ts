@@ -1,6 +1,7 @@
-// 判断指定日期是不是今天
-import isToday from './isToday';
 
+import * as dayjs from 'dayjs'
+import diffDays from './diffDays';
+import compareDate from './compareDate'
+import isToday from './isToday'
 
-
-export { isToday };
+export { diffDays,compareDate,isToday,dayjs };

@@ -7,6 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
+    "testWatch": "jest --watchAll",
     "clean": "rimraf dist && rimraf esm",
     "clear": "rimraf node_modules && npm run clean",
     "build": "npm run clean && npm run build-common && npm run build-es",
@@ -22,6 +23,7 @@
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.0.2",
     "bignumber.js": "^9.1.2",
+    "dayjs": "^1.11.10",
     "tslib": "^2.5.0"
   },
   "devDependencies": {

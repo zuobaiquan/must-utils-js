@@ -1,7 +1,7 @@
  import { isNumber } from '../types'
 import { camelCase,IEVersion } from '../utils/index'
  const ieVersion :any = IEVersion()
- const getStyle = (isNumber(ieVersion) && ieVersion < 9) ? function (element, styleName) {
+ const getStyle = (isNumber(ieVersion) && ieVersion < 9 && ieVersion!==-1) ? function (element, styleName) {
   if (!element || !styleName) {
     return null
   }

@@ -12,6 +12,10 @@ export function isObject(obj) {
   return Object.prototype.toString.call(obj) === '[object Object]'
 }
 
+export function isNull(obj) {
+  return Object.prototype.toString.call(obj) === '[object Null]'
+}
+
 export function isHtmlElement(node) {
   return node && node.nodeType === Node.ELEMENT_NODE
 }

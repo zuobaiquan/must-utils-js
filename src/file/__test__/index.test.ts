@@ -1,6 +1,7 @@
 import { getFileType,getLastName } from "..";
 
 test("test getFileType", () => {
+  expect(getFileType("")).toEqual("");
   expect(getFileType("index.html")).toEqual("html");
   expect(getFileType("https://static.xxx.cn/upload/2023829/t1693302659947blobid0.png")).toEqual("png");
 });

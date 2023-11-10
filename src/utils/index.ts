@@ -1,3 +1,5 @@
+import { isBrowser } from "../helper"
+
 const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g
 const MOZ_HACK_REGEXP = /^moz([A-Z])/
 export function camelCase(name) {
@@ -6,7 +8,10 @@ export function camelCase(name) {
   }).replace(MOZ_HACK_REGEXP, 'Moz$1')
 }
 export function IEVersion() {
-  var userAgentV = navigator.userAgent
+  if(!isBrowser){
+    return -1
+  }
+  var userAgentV = window.navigator.userAgent
   var isIE = userAgentV.indexOf('compatible') > -1 && userAgentV.indexOf('MSIE') > -1 // 判断是否IE<11浏览器
   var isEdge = userAgentV.indexOf('Edge') > -1 && !isIE // 判断是否IE的Edge浏览器
   var isIE11 = userAgentV.indexOf('Trident') > -1 && userAgentV.indexOf('rv:11.0') > -1
